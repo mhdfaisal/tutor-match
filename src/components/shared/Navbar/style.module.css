@@ -43,3 +43,12 @@
 	display: none;
 	margin: 0;
 }
+
+@media screen and (max-width: 525px) {
+	.navbarLinks {
+		display: none;
+	}
+	.menuIcon {
+		display: block;
+	}
+}

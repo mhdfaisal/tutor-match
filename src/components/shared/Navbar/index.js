@@ -20,10 +20,10 @@ const Navbar = () => {
 				<li className={styles.navbarLinkItem}>
 					<Link to='/'>Sign in</Link>
 				</li>
-				<li className={`${styles.navbarLinkItem} ${styles.menuIcon}`}>
-					<ResponsiveMenuBtn />
-				</li>
 			</ul>
+			<div className={styles.menuIcon}>
+				<ResponsiveMenuBtn />
+			</div>
 		</nav>
 	);
 };

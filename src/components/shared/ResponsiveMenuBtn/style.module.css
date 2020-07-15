@@ -2,6 +2,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: none;
+	outline: none;
+	background: transparent;
 }
 .menuIconBtn i {
 	display: flex;
