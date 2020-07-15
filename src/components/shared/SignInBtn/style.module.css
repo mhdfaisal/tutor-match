@@ -1,0 +1,13 @@
+.signInBtn {
+	border: 1px solid #212b3a;
+	background-color: transparent;
+	color: #253141;
+	padding: 8px 25px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	outline: none;
+	cursor: pointer;
+}
