@@ -2,10 +2,10 @@ import React from 'react';
 
 import styles from './style.module.css';
 
-const ResponsiveMenuBtn = () => {
+const ResponsiveMenuBtn = ({ onClick }) => {
 	return (
 		<div>
-			<button className={styles.menuIconBtn}>
+			<button className={styles.menuIconBtn} onClick={onClick}>
 				<i>
 					<span className='material-icons'>menu</span>
 				</i>

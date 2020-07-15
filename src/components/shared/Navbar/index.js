@@ -1,16 +1,44 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 import Logo from '../../../assets/images/Logo.svg';
 import styles from './style.module.css';
 import ResponsiveMenuBtn from '../ResponsiveMenuBtn';
-import Button from '../Button';
 import BackDrop from '../BackDrop';
 import NavLinks from './NavLinks';
+import SideDrawer from '../SideDrawer';
 
 const Navbar = () => {
+	const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+
+	const openDrawerHandler = () => {
+		setDrawerIsOpen(true);
+	};
+
+	const closeDrawerHandler = () => {
+		setDrawerIsOpen(false);
+	};
+	useEffect(() => {
+		let mounted = true;
+		console.log(drawerIsOpen);
+		if (mounted) {
+			if (drawerIsOpen) {
+				document.body.style.overflow = 'hidden';
+			} else {
+				document.body.style.overflow = 'auto';
+			}
+		}
+		return () => {
+			mounted = false;
+		};
+	}, [drawerIsOpen]);
 	return (
 		<>
+			{drawerIsOpen && <BackDrop onClick={closeDrawerHandler} />}
+			<SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
+				<ul>
+					<NavLinks classes={styles.navbarLinkItem} />
+				</ul>
+			</SideDrawer>
 			<nav className={styles.navbarContainer}>
 				<div className={styles.navbarBrand}>
 					<div className={styles.navbarLogoContainer}>
@@ -21,7 +49,7 @@ const Navbar = () => {
 					<NavLinks classes={styles.navbarLinkItem} />
 				</ul>
 				<div className={styles.menuIcon}>
-					<ResponsiveMenuBtn />
+					<ResponsiveMenuBtn onClick={openDrawerHandler} />
 				</div>
 			</nav>
 		</>
