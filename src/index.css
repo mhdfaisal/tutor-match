@@ -14,9 +14,15 @@ body {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Avenir', sans-serif;
+	font-size: 16px;
+	color: #253141;
 }
 #root {
 	flex: 1 1 0;
 	display: flex;
 	flex-direction: column;
+}
+a {
+	color: #253141;
+	text-decoration: none;
 }

@@ -1,16 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../../assets/images/Logo.svg';
+import styles from './style.module.css';
+import ResponsiveMenuBtn from '../ResponsiveMenuBtn';
 
 const Navbar = () => {
 	return (
-		<nav>
-			<div className='navbar-brand'>
-				<div className='navbar-logo-container'>
+		<nav className={styles.navbarContainer}>
+			<div className={styles.navbarBrand}>
+				<div className={styles.navbarLogoContainer}>
 					<img src={Logo} alt='brand' />
 				</div>
 			</div>
-			<div className='navbar-links'></div>
+			<ul className={styles.navbarLinks}>
+				<li className={styles.navbarLinkItem}>
+					<Link to='/'>Become a tutor</Link>
+				</li>
+				<li className={styles.navbarLinkItem}>
+					<Link to='/'>Sign in</Link>
+				</li>
+				<li className={`${styles.navbarLinkItem} ${styles.menuIcon}`}>
+					<ResponsiveMenuBtn />
+				</li>
+			</ul>
 		</nav>
 	);
 };

@@ -1,0 +1,45 @@
+.navbarContainer {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+.navbarBrand {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	align-self: stretch;
+	justify-content: center;
+	align-items: flex-start;
+}
+.navbarLogoContainer {
+	height: 11.9px;
+	width: 130.22px;
+	display: flex;
+}
+.navbarLogoContainer img {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+.navbarLinks {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+}
+.navbarLinkItem {
+	display: flex;
+	margin-right: 1.3125rem;
+}
+.navbarLinkItem a {
+	font-size: 0.875rem;
+}
+.navbarLinkItem:nth-child(2) {
+	margin: 0;
+}
+.menuIcon {
+	display: none;
+	margin: 0;
+}
