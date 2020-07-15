@@ -6,6 +6,7 @@ import styles from './style.module.css';
 import ResponsiveMenuBtn from '../ResponsiveMenuBtn';
 import Button from '../Button';
 import BackDrop from '../BackDrop';
+import NavLinks from './NavLinks';
 
 const Navbar = () => {
 	return (
@@ -17,12 +18,7 @@ const Navbar = () => {
 					</div>
 				</div>
 				<ul className={styles.navbarLinks}>
-					<li className={styles.navbarLinkItem}>
-						<Link to='/'>Become a tutor</Link>
-					</li>
-					<li className={styles.navbarLinkItem}>
-						<Button text='Sign In' />
-					</li>
+					<NavLinks classes={styles.navbarLinkItem} />
 				</ul>
 				<div className={styles.menuIcon}>
 					<ResponsiveMenuBtn />
