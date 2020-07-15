@@ -31,5 +31,29 @@
 	color: #fff !important;
 	border: 1px solid #fff !important;
 	font-size: 1rem !important;
-	padding: 11px 28px 14px 28px !important;
+	padding: 0.6875rem 1.75rem 0.875rem 1.75rem !important;
+}
+
+@media screen and (max-width: 728px) {
+	.heroHeading {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	.subHeading {
+		font-size: 0.95rem;
+	}
+	.getStartedBtn {
+		font-size: 0.9rem !important;
+		padding: 5.5px 14px 7px 14px !important;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.heroHeading {
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+	.subHeading {
+		font-size: 0.92rem;
+	}
 }
