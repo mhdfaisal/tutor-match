@@ -35,7 +35,7 @@ const Navbar = () => {
 		<>
 			{drawerIsOpen && <BackDrop onClick={closeDrawerHandler} />}
 			<SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
-				<ul>
+				<ul className={styles.sideDrawerLinks}>
 					<NavLinks classes={styles.navbarLinkItem} />
 				</ul>
 			</SideDrawer>

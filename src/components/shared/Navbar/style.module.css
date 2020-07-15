@@ -46,6 +46,20 @@
 	align-self: center;
 }
 
+.sideDrawerLinks {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+.sideDrawerLinks li {
+	margin: 0 0 1.5rem;
+	justify-content: center;
+}
+
+.sideDrawerLinks li a {
+	display: inline-block;
+}
+
 @media screen and (max-width: 525px) {
 	.navbarLinks {
 		display: none;
