@@ -1,0 +1,35 @@
+.topSection {
+	height: 428px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f2f2f2;
+}
+.heroSection {
+	flex: 1 1 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1.25rem 0 1.25rem;
+	text-align: center;
+}
+.heroHeading {
+	font-size: 2.25rem;
+	font-weight: bold;
+}
+.subHeading {
+	margin-top: 1.0625rem;
+	font-size: 1.125rem;
+	font-weight: lighter;
+}
+.heroBtnContainer {
+	margin-top: 3.375rem;
+}
+.getStartedBtn {
+	background-color: #009c38 !important;
+	color: #fff !important;
+	border: 1px solid #fff !important;
+	font-size: 1rem !important;
+	padding: 11px 28px 14px 28px !important;
+}

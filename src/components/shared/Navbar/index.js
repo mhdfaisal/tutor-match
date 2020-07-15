@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../../assets/images/Logo.svg';
 import styles from './style.module.css';
 import ResponsiveMenuBtn from '../ResponsiveMenuBtn';
-import SignInBtn from '../SignInBtn';
+import Button from '../Button';
 
 const Navbar = () => {
 	return (
@@ -19,7 +19,7 @@ const Navbar = () => {
 					<Link to='/'>Become a tutor</Link>
 				</li>
 				<li className={styles.navbarLinkItem}>
-					<SignInBtn />
+					<Button text='Sign In' />
 				</li>
 			</ul>
 			<div className={styles.menuIcon}>
