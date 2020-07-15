@@ -16,6 +16,7 @@ body {
 	font-family: 'Avenir', sans-serif;
 	font-size: 16px;
 	color: #253141;
+	background-color: #f2f2f2;
 }
 #root {
 	flex: 1 1 0;
