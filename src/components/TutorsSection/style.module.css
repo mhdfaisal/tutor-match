@@ -56,3 +56,9 @@
 		margin-right: 40px;
 	}
 }
+
+@media screen and (min-width: 1579px) {
+	.tutorsCardSection .mr40:nth-child(4n + 0) {
+		margin-right: 40px;
+	}
+}

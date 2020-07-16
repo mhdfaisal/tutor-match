@@ -4,6 +4,7 @@ import {
 	FETCH_TUTORS_DATA_FAILURE,
 	APPLY_FILTER,
 	APPLY_SORT,
+	SHOW_ALL_TUTORS,
 } from './types';
 
 export const reducer = (state = {}, action) => {
@@ -47,7 +48,7 @@ export const reducer = (state = {}, action) => {
 		}
 		case APPLY_SORT: {
 			const sortBy = (payload?.sortBy ?? '').toLowerCase();
-			const { tutors } = state;
+			const { tutors, tutorsToShow } = state;
 			const sortedTutorsToShow = tutors.sort((a, b) => {
 				if (sortBy === 'city') {
 					if (a.address[sortBy] > b.address[sortBy]) return 1;
@@ -60,8 +61,24 @@ export const reducer = (state = {}, action) => {
 				}
 				return 0;
 			});
-			return { ...state, sortBy, tutorsToShow: [...sortedTutorsToShow], filterBy: '' };
+			return {
+				...state,
+				sortBy,
+				tutorsToShow: [
+					...sortedTutorsToShow.slice(
+						0,
+						sortedTutorsToShow.length >= 8 && tutorsToShow.length <= 8
+							? 8
+							: sortedTutorsToShow.length
+					),
+				],
+				tutors: [...sortedTutorsToShow],
+				filterBy: '',
+			};
 		}
+		case SHOW_ALL_TUTORS:
+			const { tutors } = state;
+			return { ...state, tutorsToShow: [...tutors] };
 		default:
 			return state;
 	}

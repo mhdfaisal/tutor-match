@@ -12,6 +12,7 @@ import {
 	FETCH_TUTORS_DATA_FAILURE,
 	APPLY_FILTER,
 	APPLY_SORT,
+	SHOW_ALL_TUTORS,
 } from './types';
 import { reducer } from './reducer';
 import Button from '../shared/Button';
@@ -56,7 +57,7 @@ const TutorsSection = () => {
 		};
 	}, []);
 
-	const { tutorsToShow } = data;
+	const { tutorsToShow, filterBy, tutors } = data;
 	return (
 		<main className={styles.tutorsSection}>
 			<section>
@@ -83,7 +84,15 @@ const TutorsSection = () => {
 				})}
 			</section>
 			<section className={styles.seeMoreContainer}>
-				<Button text='See all Tutors' classes={styles.seeMoreBtn} />
+				{filterBy === '' && tutorsToShow.length < tutors.length && (
+					<Button
+						text='See all Tutors'
+						classes={styles.seeMoreBtn}
+						onClick={() => {
+							dispatch({ type: SHOW_ALL_TUTORS });
+						}}
+					/>
+				)}
 			</section>
 		</main>
 	);
