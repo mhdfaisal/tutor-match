@@ -14,7 +14,12 @@
 .filterSortFlex {
 	margin-top: 4.625rem;
 	display: flex;
+	align-items: flex-start;
+	height: 4.125rem;
 }
 .sortBarContainer {
-	margin-left: 41px;
+	margin-left: 2.5625rem;
+}
+.tutorsCardSection {
+	margin-top: 1.875rem;
 }
