@@ -5,7 +5,9 @@ import styles from './style.module.css';
 import UserPhoto from '../../../assets/images/user-photo.svg';
 import StudentPhoto from '../StudentPhoto';
 
-const TutorCard = () => {
+const TutorCard = ({ tutorDetails }) => {
+	const { name, address } = tutorDetails;
+	const { city } = address;
 	return (
 		<div className={styles.tutorCardContainer}>
 			<div className={styles.tutorCardHeader}>
@@ -14,10 +16,10 @@ const TutorCard = () => {
 				</div>
 			</div>
 			<div className={styles.tutorCardBody}>
-				<div className={styles.tutorName}>John Issac</div>
+				<div className={styles.tutorName}>{name}</div>
 				<div className={styles.tutorDetails}>
 					<div className={styles.cityLabel}>City</div>
-					<Button text='London' classes={styles.cityBtn} />
+					<Button text={city} classes={styles.cityBtn} />
 				</div>
 				<div className={styles.studentsSoFar}>
 					<p className={styles.label}>Students so far</p>

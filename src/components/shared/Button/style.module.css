@@ -10,4 +10,5 @@
 	-o-border-radius: 4px;
 	outline: none;
 	cursor: pointer;
+	text-transform: capitalize;
 }

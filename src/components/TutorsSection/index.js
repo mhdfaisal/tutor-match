@@ -10,12 +10,15 @@ import {
 	FETCH_TUTORS_DATA_INIT,
 	FETCH_TUTORS_DATA_SUCCESS,
 	FETCH_TUTORS_DATA_FAILURE,
+	APPLY_FILTER,
+	APPLY_SORT,
 } from './types';
 import { reducer } from './reducer';
 
 const TutorsSection = () => {
 	const [data, dispatch] = useReducer(reducer, {
 		tutors: [],
+		tutorsToShow: [],
 		isLoading: false,
 		success: null,
 		sortBy: '',
@@ -34,6 +37,14 @@ const TutorsSection = () => {
 		}
 	};
 
+	const applyFilter = (filterCity) => {
+		dispatch({ type: APPLY_FILTER, payload: { filterCity } });
+	};
+
+	const applySort = (sortBy) => {
+		dispatch({ type: APPLY_SORT, payload: { sortBy } });
+	};
+
 	useEffect(() => {
 		let isMounted = true;
 		if (isMounted) {
@@ -44,7 +55,7 @@ const TutorsSection = () => {
 		};
 	}, []);
 
-	const { tutors } = data;
+	const { tutorsToShow } = data;
 	return (
 		<main className={styles.tutorsSection}>
 			<section>
@@ -55,14 +66,14 @@ const TutorsSection = () => {
 			</section>
 			<section className={styles.filterSortFlex}>
 				<div className={styles.filterBarContainer}>
-					<FilterBar />
+					<FilterBar activeFilterBy={data?.filterBy} handleFilterBtnClick={applyFilter} />
 				</div>
 				<div className={styles.sortBarContainer}>
-					<SortBar />
+					<SortBar activeFilterBy={data?.sortBy} handleSortBtnClick={applySort} />
 				</div>
 			</section>
 			<section className={styles.tutorsCardSection}>
-				{tutors.map((item, index) => {
+				{tutorsToShow.map((item, index) => {
 					return (
 						<div
 							key={index}
