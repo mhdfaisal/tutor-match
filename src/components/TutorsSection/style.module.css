@@ -25,6 +25,9 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+.tutorsCardSection .mr40:nth-child(4n + 0) {
+	margin-right: 0;
+}
 .mr40 {
 	margin-right: 40px;
 }

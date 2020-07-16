@@ -69,20 +69,13 @@ const TutorsSection = () => {
 					<FilterBar activeFilterBy={data?.filterBy} handleFilterBtnClick={applyFilter} />
 				</div>
 				<div className={styles.sortBarContainer}>
-					<SortBar activeFilterBy={data?.sortBy} handleSortBtnClick={applySort} />
+					<SortBar activeSortBy={data?.sortBy} handleSortBtnClick={applySort} />
 				</div>
 			</section>
 			<section className={styles.tutorsCardSection}>
 				{tutorsToShow.map((item, index) => {
 					return (
-						<div
-							key={index}
-							className={`${
-								(index + 1) % 4 === 0
-									? styles.mb30
-									: styles.mr40 + ' ' + styles.mb30
-							}`}
-						>
+						<div className={`${styles.mr40} ${styles.mb30}`} key={index}>
 							<TutorCard tutorDetails={item} />
 						</div>
 					);
