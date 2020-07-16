@@ -1,5 +1,6 @@
 .tutorsSection {
-	margin: 4.375rem 3.75rem 0 3.75rem;
+	margin: 4.375rem auto 0 auto;
+	width: 1160px;
 }
 .mainHeading {
 	font-size: 1.5rem;
@@ -16,6 +17,16 @@
 	display: flex;
 	align-items: flex-start;
 	height: 4.125rem;
+	position: relative;
+	user-select: none;
+}
+.filterSortFlex:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 99.9%;
+	border: 1px solid #e0e0e0;
 }
 .sortBarContainer {
 	margin-left: 2.5625rem;
