@@ -22,4 +22,12 @@
 }
 .tutorsCardSection {
 	margin-top: 1.875rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.mr40 {
+	margin-right: 40px;
+}
+.mb30 {
+	margin-bottom: 30px;
 }

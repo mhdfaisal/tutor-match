@@ -19,7 +19,6 @@ const Navbar = () => {
 	};
 	useEffect(() => {
 		let mounted = true;
-		console.log(drawerIsOpen);
 		if (mounted) {
 			if (drawerIsOpen) {
 				document.body.style.overflow = 'hidden';
