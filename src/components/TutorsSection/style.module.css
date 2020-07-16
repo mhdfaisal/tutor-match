@@ -61,6 +61,10 @@
 .mb30 {
 	margin-bottom: 30px;
 }
+.loading {
+	margin: 2rem 0 2rem 0;
+	text-align: center;
+}
 
 @media screen and (max-width: 1279px) {
 	.tutorsCardSection .mr40:nth-child(4n + 0) {

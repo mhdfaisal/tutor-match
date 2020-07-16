@@ -57,7 +57,7 @@ const TutorsSection = () => {
 		};
 	}, []);
 
-	const { tutorsToShow, filterBy, tutors } = data;
+	const { tutorsToShow, filterBy, tutors, isLoading, success } = data;
 	return (
 		<main className={styles.tutorsSection}>
 			<section>
@@ -74,26 +74,32 @@ const TutorsSection = () => {
 					<SortBar activeSortBy={data?.sortBy} handleSortBtnClick={applySort} />
 				</div>
 			</section>
-			<section className={styles.tutorsCardSection}>
-				{tutorsToShow.map((item, index) => {
-					return (
-						<div className={`${styles.mr40} ${styles.mb30}`} key={index}>
-							<TutorCard tutorDetails={item} />
-						</div>
-					);
-				})}
-			</section>
-			<section className={styles.seeMoreContainer}>
-				{filterBy === '' && tutorsToShow.length < tutors.length && (
-					<Button
-						text='See all Tutors'
-						classes={styles.seeMoreBtn}
-						onClick={() => {
-							dispatch({ type: SHOW_ALL_TUTORS });
-						}}
-					/>
-				)}
-			</section>
+			{isLoading && <div className={styles.loading}>Loading...</div>}
+			{!isLoading && success && (
+				<>
+					{' '}
+					<section className={styles.tutorsCardSection}>
+						{tutorsToShow.map((item, index) => {
+							return (
+								<div className={`${styles.mr40} ${styles.mb30}`} key={index}>
+									<TutorCard tutorDetails={item} />
+								</div>
+							);
+						})}
+					</section>
+					<section className={styles.seeMoreContainer}>
+						{filterBy === '' && tutorsToShow.length < tutors.length && (
+							<Button
+								text='See all Tutors'
+								classes={styles.seeMoreBtn}
+								onClick={() => {
+									dispatch({ type: SHOW_ALL_TUTORS });
+								}}
+							/>
+						)}
+					</section>
+				</>
+			)}
 		</main>
 	);
 };
