@@ -1,20 +1,20 @@
-.filterBarContainer {
+.sortBarContainer {
 	display: flex;
 }
-.filterBarContainer .label {
+.sortBarContainer .label {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 0.875rem;
 	font-weight: bold;
 }
-.filters {
+.sorts {
 	flex: 1;
 	display: flex;
 }
-.filterBtnsContainer {
+.sortBtnsContainer {
 	display: flex;
-	margin-left: 0.75rem;
+	margin-left: 0.875rem;
 	background-color: #dadada;
 	border: 1px solid #bdbdbd;
 	border-radius: 0.25rem;
@@ -23,7 +23,7 @@
 	-ms-border-radius: 0.25rem;
 	-o-border-radius: 0.25rem;
 }
-.filterBtn {
+.sortBtn {
 	padding: 0;
 	width: 6.1875rem;
 	height: 2.0625rem;
@@ -38,6 +38,6 @@
 	-ms-border-radius: 0;
 	-o-border-radius: 0;
 }
-.filterBtn:last-child {
+.sortBtn:last-child {
 	border-right: none;
 }

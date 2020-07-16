@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './style.module.css';
 import FilterBar from '../shared/FilterBar';
+import SortBar from '../shared/SortBar';
 
 const TutorsSection = () => {
 	return (
@@ -13,10 +14,15 @@ const TutorsSection = () => {
 				</h4>
 			</section>
 			<section className={styles.filterSortFlex}>
-				<div>
+				<div className={styles.filterBarContainer}>
 					<FilterBar />
 				</div>
+				<div className={styles.sortBarContainer}>
+					<SortBar />
+				</div>
 			</section>
+			<br />
+			<br />
 		</main>
 	);
 };
