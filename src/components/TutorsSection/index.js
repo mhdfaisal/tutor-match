@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './style.module.css';
 import FilterBar from '../shared/FilterBar';
 import SortBar from '../shared/SortBar';
+import TutorCard from '../shared/TutorCard';
 
 const TutorsSection = () => {
 	return (
@@ -21,8 +22,9 @@ const TutorsSection = () => {
 					<SortBar />
 				</div>
 			</section>
-			<br />
-			<br />
+			<section className={styles.tutorsCardSection}>
+				<TutorCard />
+			</section>
 		</main>
 	);
 };
