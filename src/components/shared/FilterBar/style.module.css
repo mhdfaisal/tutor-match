@@ -1,0 +1,43 @@
+.filterBarContainer {
+	display: flex;
+}
+.filterBarContainer .label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+.filters {
+	flex: 1;
+	display: flex;
+}
+.filterBtnsContainer {
+	display: flex;
+	margin-left: 12px;
+	background-color: #dadada;
+	border: 1px solid #bdbdbd;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+.filterBtn {
+	padding: 0;
+	width: 99px;
+	height: 33px;
+	font-size: 12px !important;
+	font-weight: 600;
+	background-color: #dadada;
+	border: none;
+	border-right: 1px solid #bdbdbd;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+}
+.filterBtn:last-child {
+	border-right: none;
+}
