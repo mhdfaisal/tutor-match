@@ -44,3 +44,10 @@
 .filterBtn:last-child {
 	border-right: none;
 }
+
+@media screen and (max-width: 410px) {
+	.filterBtn {
+		width: 70px;
+		height: 27px;
+	}
+}

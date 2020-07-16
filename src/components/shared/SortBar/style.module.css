@@ -44,3 +44,9 @@
 .sortBtn:last-child {
 	border-right: none;
 }
+@media screen and (max-width: 410px) {
+	.sortBtn {
+		width: 70px;
+		height: 27px;
+	}
+}

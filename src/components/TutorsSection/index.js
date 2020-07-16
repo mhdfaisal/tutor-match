@@ -87,8 +87,8 @@ const TutorsSection = () => {
 							);
 						})}
 					</section>
-					<section className={styles.seeMoreContainer}>
-						{filterBy === '' && tutorsToShow.length < tutors.length && (
+					{filterBy === '' && tutorsToShow.length < tutors.length && (
+						<section className={styles.seeMoreContainer}>
 							<Button
 								text='See all Tutors'
 								classes={styles.seeMoreBtn}
@@ -96,8 +96,8 @@ const TutorsSection = () => {
 									dispatch({ type: SHOW_ALL_TUTORS });
 								}}
 							/>
-						)}
-					</section>
+						</section>
+					)}
 				</>
 			)}
 		</main>

@@ -1,6 +1,7 @@
 .tutorsSection {
 	margin: 4.375rem auto 0 auto;
-	width: 1160px;
+	max-width: 1160px;
+	overflow-x: hidden;
 }
 .mainHeading {
 	font-size: 1.5rem;
@@ -69,6 +70,56 @@
 @media screen and (max-width: 1279px) {
 	.tutorsCardSection .mr40:nth-child(4n + 0) {
 		margin-right: 40px;
+	}
+}
+
+@media screen and (max-width: 1205px) {
+	.tutorsSection {
+		max-width: 90%;
+	}
+}
+
+@media screen and (max-width: 728px) {
+	.mainHeading {
+		font-size: 1.4rem;
+	}
+	.subHeading {
+		font-size: 0.95rem;
+	}
+}
+
+@media screen and (max-width: 577px) {
+	.tutorsCardSection .mr40 {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 999px) {
+	.tutorsCardSection {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 955px) {
+	.tutorsCardSection .mr40:nth-child(2n + 0) {
+		margin-right: 0px;
+	}
+}
+
+@media screen and (max-width: 746px) {
+	.filterSortFlex {
+		flex-direction: column;
+	}
+	.filterSortFlex:after {
+		display: none;
+	}
+	.filterBarContainer,
+	.sortBarContainer {
+		margin-left: 0;
+		width: 100%;
+	}
+	.sortBarContainer {
+		margin-top: 0.7rem;
 	}
 }
 
