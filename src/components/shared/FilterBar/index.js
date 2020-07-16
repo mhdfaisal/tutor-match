@@ -22,7 +22,11 @@ const FilterBar = ({ activeFilterBy, handleFilterBtnClick }) => {
 							<Button
 								key={index}
 								text={item.label}
-								classes={styles.filterBtn}
+								classes={`${
+									activeFilterBy === item.value
+										? styles.filterBtn + ' ' + styles.filterBtnActive
+										: styles.filterBtn
+								}`}
 								onClick={() => {
 									handleFilterBtnClick(item.value);
 								}}

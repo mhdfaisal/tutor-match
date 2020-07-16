@@ -58,6 +58,7 @@ export const reducer = (state = {}, action) => {
 					if (a[sortBy] < b[sortBy]) return -1;
 					return 0;
 				}
+				return 0;
 			});
 			return { ...state, sortBy, tutorsToShow: [...sortedTutorsToShow], filterBy: '' };
 		}

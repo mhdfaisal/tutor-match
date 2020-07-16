@@ -16,7 +16,11 @@ const SortBar = ({ activeSortBy, handleSortBtnClick }) => {
 					{SORT_BY.map((item, index) => (
 						<Button
 							text={item}
-							classes={styles.sortBtn}
+							classes={`${
+								activeSortBy === item
+									? styles.sortBtn + ' ' + styles.sortBtnActive
+									: styles.sortBtn
+							}`}
 							key={index}
 							onClick={() => {
 								handleSortBtnClick(item);

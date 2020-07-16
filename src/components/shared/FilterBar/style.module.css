@@ -38,6 +38,11 @@
 	-ms-border-radius: 0;
 	-o-border-radius: 0;
 }
+.filterBtnActive {
+	background-color: #009c38 !important;
+	color: #fff;
+	border: none;
+}
 .filterBtn:last-child {
 	border-right: none;
 }
