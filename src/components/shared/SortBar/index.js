@@ -3,7 +3,10 @@ import React from 'react';
 import Button from '../Button';
 import styles from './style.module.css';
 
-const SORT_BY = ['name', 'city'];
+const SORT_BY = [
+	{ label: 'Name', value: 'name' },
+	{ label: 'City', value: 'city' },
+];
 
 const SortBar = ({ activeSortBy, handleSortBtnClick }) => {
 	return (
@@ -15,15 +18,15 @@ const SortBar = ({ activeSortBy, handleSortBtnClick }) => {
 				<div className={styles.sortBtnsContainer}>
 					{SORT_BY.map((item, index) => (
 						<Button
-							text={item}
+							text={item.label}
 							classes={`${
-								activeSortBy === item
+								activeSortBy === item.value
 									? styles.sortBtn + ' ' + styles.sortBtnActive
 									: styles.sortBtn
 							}`}
 							key={index}
 							onClick={() => {
-								handleSortBtnClick(item);
+								handleSortBtnClick(item.value);
 							}}
 						/>
 					))}

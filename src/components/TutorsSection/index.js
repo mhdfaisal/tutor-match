@@ -14,6 +14,7 @@ import {
 	APPLY_SORT,
 } from './types';
 import { reducer } from './reducer';
+import Button from '../shared/Button';
 
 const TutorsSection = () => {
 	const [data, dispatch] = useReducer(reducer, {
@@ -80,6 +81,9 @@ const TutorsSection = () => {
 						</div>
 					);
 				})}
+			</section>
+			<section className={styles.seeMoreContainer}>
+				<Button text='See all Tutors' classes={styles.seeMoreBtn} />
 			</section>
 		</main>
 	);

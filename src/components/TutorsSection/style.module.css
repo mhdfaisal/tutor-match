@@ -28,9 +28,31 @@
 .tutorsCardSection .mr40:nth-child(4n + 0) {
 	margin-right: 0;
 }
+.seeMoreContainer {
+	margin-top: 40px;
+	margin-bottom: 100px;
+	display: flex;
+	justify-content: center;
+}
+.seeMoreBtn {
+	height: 44px;
+	width: 170px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #dadada !important;
+	font-size: 1rem;
+	border: none !important;
+}
 .mr40 {
 	margin-right: 40px;
 }
 .mb30 {
 	margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1279px) {
+	.tutorsCardSection .mr40:nth-child(4n + 0) {
+		margin-right: 40px;
+	}
 }
